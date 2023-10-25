@@ -6,7 +6,7 @@ export const Home=()=>{
 const [pka, setpka] = useState(0)
 const [constraction, setConstraction] = useState(0)
 const [result, setResult] = useState()
-const [err, setErr] = useState("")
+
 
 
 
@@ -15,7 +15,7 @@ const calculatepka = ()=>{
     const denominator = 2 * Math.pow(10, pka);
     const logResult = -Math.log10(numerator / denominator);
 
-    logResult > 0 && logResult <= 14 ? setResult(logResult) && setErr("") || pka === "" || constraction === "" : setErr("invalid properties!") && setResult(0) ;
+    logResult > 0 && logResult <= 14 ? setResult(logResult)  : setResult("invalid properties!");
     
 }
 
@@ -42,9 +42,8 @@ const calculatepka = ()=>{
 
             <button className='border border-slate-100 rounded-lg p-1 px-3 my-3 text-2xl hover:bg-slate-100 hover:text-[#242424]' onClick={calculatepka}>find pH</button>
 
-            <label>
+            <label className='border border-slate-100 rounded-lg p-1 px-2 bg-slate-100 text-[#242424]'>
                 <span>pH is : {result}</span>
-                <span>{err}</span>
             </label>
 
             </div>
