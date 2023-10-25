@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@700&display=swap');
 :root {
   font-family: 'Sometype Mono', monospace;
   line-height: 1.5;
